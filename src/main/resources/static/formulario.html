@@ -189,15 +189,33 @@
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(medico)
     })
-    .then(res => {
-      if (!res.ok) return res.json().then(err => Promise.reject(err));
+
+    .then(async res => {
+      if (!res.ok) {
+        const erro = await res.json();
+        return Promise.reject(erro);
+      }
+
       mostrarModal(id ? "Médico atualizado com sucesso!" : "Médico cadastrado com sucesso!");
     })
+
+
     .catch(err => {
       const div = document.getElementById("mensagem");
-      div.innerHTML = err.join("<br>");
+
+      if (Array.isArray(err)) {
+        div.innerHTML = err.join("<br>");
+      } else if (typeof err === "string") {
+        div.innerHTML = err;
+      } else if (err.detail) {
+        div.innerHTML = err.detail;
+      } else {
+        div.innerHTML = "Erro ao cadastrar médico.";
+      }
+
       div.style.display = "block";
     });
+
   };
 
   function voltar() {
