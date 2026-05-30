@@ -18,6 +18,27 @@ import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
+
+/**
+ * Responsável por:
+ * Expor os endpoints REST para gerenciamento de médicos e intermediar a comunicação
+ * entre cliente e camada de serviço.
+ *
+ * Objetivo:
+ * Centralizar o tratamento das requisições HTTP (GET, POST, PUT, DELETE) relacionadas
+ * à entidade Médico, garantindo validação de entrada e padronização das respostas.
+ *
+ * Realiza:
+ * - Recebimento e roteamento de requisições HTTP para a camada de serviço (MedicoService)
+ * - Conversão de dados via DTO (MedicoDto)
+ * - Validação de dados de entrada utilizando Bean Validation (@Valid)
+ * - Construção de respostas HTTP adequadas (ResponseEntity, status codes e headers)
+ * - Geração de URI para recursos criados (Location header)
+ * - Tratamento de exceções específicas (Não encontrado e regras de negócio)
+ * - Padronização de erros utilizando ProblemDetail e retorno de mensagens de validação
+ */
+
+
 @RestController
 @RequestMapping("/medicos")
 public class MedicoController {

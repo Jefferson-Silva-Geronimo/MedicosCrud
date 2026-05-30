@@ -1,3 +1,23 @@
+<!--
+Responsável por:
+Fornecer a interface de cadastro e edição de médicos, integrando o frontend com a API REST.
+
+Objetivo:
+Permitir a entrada, validação básica e envio de dados do médico, além de suportar
+o fluxo de criação e atualização de registros de forma dinâmica.
+
+Realiza:
+- Renderização de formulário para captura de dados (nome, CRM, especialidade, etc.)
+- Aplicação de estrutura visual e usabilidade por meio de CSS (layout, botões, mensagens)
+- Identificação de contexto (criação ou edição) via query parameter (id)
+- Consumo da API REST utilizando fetch (GET, POST, PUT)
+- Preenchimento automático do formulário no modo de edição
+- Conversão e preparação dos dados para envio em formato JSON
+- Tratamento de respostas da API, incluindo erros de validação e regras de negócio
+- Exibição de mensagens de erro e feedback ao usuário
+- Controle de modal para confirmação de operações bem-sucedidas
+- Redirecionamento de navegação após ações (cancelamento e confirmação)
+-->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

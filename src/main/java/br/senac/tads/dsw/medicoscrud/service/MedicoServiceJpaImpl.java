@@ -13,6 +13,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Responsável por:
+ * Implementar a lógica de negócio da entidade Médico e orquestrar a comunicação
+ * entre a camada de persistência (Repository) e a camada de apresentação (Controller).
+ *
+ * Objetivo:
+ * Executar operações de CRUD aplicando regras de negócio, validações e controle transacional,
+ * garantindo integridade e consistência dos dados.
+ *
+ * Realiza:
+ * - Implementação do contrato definido pela interface MedicoService
+ * - Interação com o MedicoRepository para operações de persistência
+ * - Conversão entre Entity (Medico) e DTO (MedicoDto)
+ * - Aplicação de regras de negócio (ex: validação de unicidade do CRM)
+ * - Tratamento de cenários de não encontrado com exceções específicas
+ * - Controle transacional das operações (@Transactional)
+ * - Separação entre operações somente leitura e escrita (readOnly = true)
+ * - Atualização controlada dos atributos da entidade
+ */
+
 @Primary
 @Service
 public class MedicoServiceJpaImpl implements MedicoService {

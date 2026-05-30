@@ -4,6 +4,20 @@ package br.senac.tads.dsw.medicoscrud;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Responsável por:
+ * Inicializar e configurar a aplicação Spring Boot.
+ *
+ * Objetivo:
+ * Servir como ponto de entrada da aplicação, acionando o processo de bootstrap
+ * e carregamento do contexto do Spring.
+ *
+ * Realiza:
+ * - Inicialização da aplicação via SpringApplication.run
+ * - Ativação da configuração automática do Spring Boot (@SpringBootApplication)
+ * - Escaneamento de componentes para injeção de dependência
+ * - Carregamento do contexto da aplicação (ApplicationContext)
+ */
 @SpringBootApplication
 public class MedicosCrudApplication {
 

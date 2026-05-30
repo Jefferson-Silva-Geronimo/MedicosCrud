@@ -2,6 +2,24 @@ package br.senac.tads.dsw.medicoscrud.entity;
 
 import jakarta.persistence.*;
 
+/**
+ * Responsável por:
+ * Representar a entidade de domínio Médico e mapear sua persistência no banco de dados.
+ *
+ * Objetivo:
+ * Definir a estrutura da tabela "tb_medicos" e estabelecer o mapeamento objeto-relacional (ORM)
+ * utilizando JPA, garantindo integridade e consistência dos dados armazenados.
+ *
+ * Realiza:
+ * - Mapeamento da classe para a tabela do banco de dados (@Entity, @Table)
+ * - Definição da chave primária com geração automática (IDENTITY)
+ * - Configuração de restrições de persistência (nullable, unique, length)
+ * - Representação dos atributos persistidos (nome, CRM, especialidade, etc.)
+ * - Controle de unicidade do campo CRM
+ * - Encapsulamento dos dados por meio de getters e setters
+ */
+
+
 @Entity
 @Table(name = "tb_medicos")
 public class Medico {

@@ -4,6 +4,23 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
+/**
+ * Responsável por:
+ * Representar a estrutura de dados de transferência (DTO) da entidade Médico
+ * entre as camadas da aplicação.
+ *
+ * Objetivo:
+ * Encapsular os dados do médico de forma desacoplada da entidade de domínio,
+ * garantindo validação e controle dos dados trafegados nas requisições e respostas.
+ *
+ * Realiza:
+ * - Transporte de dados entre Controller e Service
+ * - Aplicação de validações utilizando Bean Validation (jakarta.validation)
+ * - Restrição de formatos e obrigatoriedade dos campos (nome, CRM, especialidade, etc.)
+ * - Padronização da entrada e saída de dados da API
+ * - Controle de consistência dos dados antes de chegar à regra de negócio
+ */
+
 public class MedicoDto {
 	private Long id;
 	@NotBlank(message = "Nome é obrigatório.")

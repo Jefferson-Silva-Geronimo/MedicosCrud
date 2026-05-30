@@ -1,3 +1,24 @@
+<!--
+Responsável por:
+Exibir e gerenciar a listagem de médicos cadastrados, integrando a interface com a API REST.
+
+Objetivo:
+Permitir visualização, navegação e execução de operações (alteração e exclusão)
+sobre registros de médicos de forma dinâmica no frontend.
+
+Realiza:
+- Consumo da API REST para obtenção da lista de médicos (GET /medicos)
+- Renderização dinâmica dos dados utilizando manipulação de DOM
+- Geração de componentes visuais (cards) para cada médico
+- Aplicação de lógica de exibição condicional (ex: status de cadastro ativo/inativo)
+- Navegação para fluxo de criação e edição de registros
+- Controle de exclusão com confirmação via modal
+- Execução de requisição DELETE para remoção de registros
+- Atualização automática da interface após alterações (reload da lista)
+- Exibição de mensagens temporárias de feedback (sucesso/erro)
+- Controle de estado temporário no frontend (idParaExcluir)
+-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
