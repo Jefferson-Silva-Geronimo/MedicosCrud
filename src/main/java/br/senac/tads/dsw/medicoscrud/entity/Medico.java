@@ -8,15 +8,16 @@ import jakarta.persistence.*;
  *
  * Objetivo:
  * Definir a estrutura da tabela "tb_medicos" e estabelecer o mapeamento objeto-relacional (ORM)
- * utilizando JPA, garantindo integridade e consistência dos dados armazenados.
+ * utilizando JPA, garantindo a integridade, consistência e o correto armazenamento das regras relacionais.
  *
  * Realiza:
- * - Mapeamento da classe para a tabela do banco de dados (@Entity, @Table)
- * - Definição da chave primária com geração automática (IDENTITY)
- * - Configuração de restrições de persistência (nullable, unique, length)
- * - Representação dos atributos persistidos (nome, CRM, especialidade, etc.)
- * - Controle de unicidade do campo CRM
- * - Encapsulamento dos dados por meio de getters e setters
+ * - Mapeamento completo da classe para a tabela do banco de dados utilizando as anotações @Entity e @Table.
+ * - Definição da chave primária (id) com estratégia de autoincremento via banco de dados (GenerationType.IDENTITY).
+ * - Configuração de restrições rígidas de persistência nas colunas, como limites de tamanho (length) e obrigatoriedade (nullable = false).
+ * - Controle de unicidade a nível de banco de dados para o campo CRM (unique = true), impedindo registros duplicados.
+ * - Padronização e mapeamento explícito do atributo booleano "cadastroAtivo" para a coluna "cadastro_ativo" em formato snake_case.
+ * - Disponibilização de um construtor padrão (sem argumentos) exigido pela especificação JPA para a instanciação via reflexão.
+ * - Encapsulamento seguro dos dados persistidos por meio de métodos seletores (getters) e modificadores (setters).
  */
 
 

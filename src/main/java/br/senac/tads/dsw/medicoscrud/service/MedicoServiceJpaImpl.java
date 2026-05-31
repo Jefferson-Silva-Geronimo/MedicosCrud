@@ -23,14 +23,15 @@ import java.util.Optional;
  * garantindo integridade e consistência dos dados.
  *
  * Realiza:
- * - Implementação do contrato definido pela interface MedicoService
- * - Interação com o MedicoRepository para operações de persistência
- * - Conversão entre Entity (Medico) e DTO (MedicoDto)
- * - Aplicação de regras de negócio (ex: validação de unicidade do CRM)
- * - Tratamento de cenários de não encontrado com exceções específicas
- * - Controle transacional das operações (@Transactional)
- * - Separação entre operações somente leitura e escrita (readOnly = true)
- * - Atualização controlada dos atributos da entidade
+ * - Implementação do contrato definido pela interface MedicoService.
+ * - Interação com o MedicoRepository para operações de persistência.
+ * - Conversão bidirecional entre Entity (Medico) e DTO (MedicoDto) por meio de métodos utilitários privados.
+ * - Aplicação de regras de negócio (ex: validação de unicidade do CRM, impedindo duplicidade no cadastro e na atualização).
+ * - Tratamento de cenários de não encontrado com o lançamento de exceções customizadas de tempo de execução.
+ * - Controle transacional das operações (@Transactional) para garantir a atomicidade do banco de dados.
+ * - Separação entre operações somente leitura (readOnly = true) e escrita para otimização de performance.
+ * - Atualização controlada dos atributos da entidade antes da sincronização com o banco.
+ * - Registro do componente no contêiner do Spring como a implementação prioritária utilizando @Service e @Primary.
  */
 
 @Primary

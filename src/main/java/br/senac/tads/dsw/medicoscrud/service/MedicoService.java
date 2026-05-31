@@ -19,6 +19,7 @@ import java.util.Optional;
  * - Uso de Optional para representar possíveis ausências de resultado
  * - Desacoplamento entre Controller e implementação da lógica de negócio
  * - Padronização das assinaturas dos métodos da camada de serviço
+ * - Facilita a inversão de controle (IoC) e a criação de mocks para testes unitários
  */
 
 public interface MedicoService {
