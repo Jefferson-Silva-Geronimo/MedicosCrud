@@ -36,6 +36,7 @@ import java.util.Optional;
  * - Geração de URI para recursos criados (Location header)
  * - Tratamento de exceções específicas (Não encontrado e regras de negócio)
  * - Padronização de erros utilizando ProblemDetail e retorno de mensagens de validação
+ * - Atua como a camada de Controladora dentro do ecossistema Spring MVC/REST
  */
 
 
